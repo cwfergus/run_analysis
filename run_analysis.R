@@ -32,35 +32,42 @@ selc_measurement_data <- feature_measurement_data[,column_numbers]
 #8
 column_names <- as.character(feature_list[column_numbers, 2])
 #9
+gsub("mean()", "mean", column_names, fixed = TRUE) -> column_names
+gsub("Acc", "Accelerometer", column_names, fixed = T) -> column_names
+gsub("BodyBody", "Body", column_names, fixed=T) -> column_names
+gsub("Mag", "Magnitude", column_names, fixed=T) -> column_names
+gsub("Gyro", "Gyroscope", column_names, fixed=T) -> column_names
+gsub("std()", "Standard_Deviation", column_names, fixed=T) -> column_names
+#10
 colnames(selc_measurement_data) <- column_names
 colnames(activity_data) <- "Activity"
 colnames(subject_data) <- "Subject_ID"
 colnames(activity_labels) <- c("Activity", "Activity_Name")
-#10
-full_data <- cbind(subject_data, activity_data, selc_measurement_data)
 #11
+full_data <- cbind(subject_data, activity_data, selc_measurement_data)
+#12
 rm(feature_measurement_data)
 rm(subject_data, activity_data, selc_measurement_data, feature_list)
 rm(column_numbers, mean_col_numbers, std_col_numbers, column_names)
-#12
-Clean_Intermediate <- merge(activity_labels, full_data, by="Activity")
 #13
-rm(full_data, activity_labels)
+Clean_Intermediate <- merge(activity_labels, full_data, by="Activity")
 #14
-CI_tbl_df <- tbl_df(Clean_Intermediate)
+rm(full_data, activity_labels)
 #15
-rm(Clean_Intermediate)
+CI_tbl_df <- tbl_df(Clean_Intermediate)
 #16
-CI_tbl_df <- select(CI_tbl_df, -Activity)
+rm(Clean_Intermediate)
 #17
-grouped_data <- group_by(CI_tbl_df, Activity_Name, Subject_ID)
+CI_tbl_df <- select(CI_tbl_df, -Activity)
 #18
-rm(CI_tbl_df)
+grouped_data <- group_by(CI_tbl_df, Activity_Name, Subject_ID)
 #19
-clean_tidy <- summarise_each(grouped_data, funs(mean))
+rm(CI_tbl_df)
 #20
-rm(grouped_data)
+clean_tidy <- summarise_each(grouped_data, funs(mean))
 #21
+rm(grouped_data)
+#22
 write.table(clean_tidy, file_name, row.names=FALSE)
 
 

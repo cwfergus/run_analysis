@@ -30,7 +30,7 @@ These data were collected from accelerometers from the Samsung Galaxy S smartpho
 
 Below is a step by step description of the script. First however a quick summary:
 
-First the script checks for existance of the Raw data, and then prompts the user to name their final data file. The script then loads the relevant files and libraries, and binds related files together. Along the way the script constantly removes unneeded files/values/ and variables to limit memory use.Next it determines which measearments are needed, and creates a column list, which it uses to extract only the relevant measurements and their associated names. Finally it adds all the data files together, all with descriptive names for both the Activities and the measurements.It take this chopped data and calculates the Mean of each measurement for every activity and subject:
+First the script checks for existance of the Raw data, and then prompts the user to name their final data file. The script then loads the relevant files and libraries, and binds related files together. Along the way the script constantly removes unneeded files/values/ and variables to limit memory use.Next it determines which measearments are needed, and creates a column list, which it uses to extract only the relevant measurements and their associated names. Next it cleans up measurement names, getting rid of R incompatible objects and extending any shortened words. Finally it adds all the data files together, all with descriptive names for both the Activities and the measurements.It take this chopped data and calculates the Mean of each measurement for every activity and subject:
 
 ie For Walking, Subject 2, it calculates the mean of all 66 measurements that related to mean or Standard Deviation.
 
@@ -50,6 +50,7 @@ It writes the output of this to a .txt file called by default "clean_tidy" name 
 6) finds the features that contain mean() or std(), and makes a sorted list of the column numbers
 7) Uses that list to extract just those variables from the measurement data
 8) Makes a list of variable names by using the column numbers list again.
+9) Edits the names to be more readable, and remove R incompatible symbols
 9) Adds column names to the remaining four data/label files:
         <br>a) selc-measurement-data: column names now represent the measurements
         <br>b) activity_data: simiply labeled with "Activity" to enable merging later
