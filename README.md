@@ -43,19 +43,12 @@ It writes the output of this to a .txt file called by default "clean_tidy" name 
 2) Loads required packages. See Code Book and Read Me for more info.
 3) Reads in all the data containing files from the Dataset. See Code book for info.
 4) Binds together the test and train data:
-         <br>a) binds together the measurement data
-         <br>b) binds together the activity data
-         <br>c) binds together the subject data
 5) removes used files
 6) finds the features that contain mean() or std(), and makes a sorted list of the column numbers
 7) Uses that list to extract just those variables from the measurement data
 8) Makes a list of variable names by using the column numbers list again.
 9) Edits the names to be more readable, and remove R incompatible symbols
-9) Adds column names to the remaining four data/label files:
-        <br>a) selc-measurement-data: column names now represent the measurements
-        <br>b) activity_data: simiply labeled with "Activity" to enable merging later
-        <br>c) subject_data: Labeled with "Subject-ID", as it had no name previously
-        <br>d) activity_labels: Labeled with "Activity" to enable merge, and "Activity-Name" for description
+9) Adds column names to the remaining four data/label files
 10) Binds the three data files together
 11) removes unnecessary files/values
 12) Merges the activity-labels file with the full-data file to give descriptive activity names
