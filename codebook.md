@@ -13,7 +13,7 @@ View the ReadMe for information on the flow and logic of the script, as well as 
 
 ---
 
-###Raw Data
+###Study Design
 
 The Raw data is available at: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
@@ -29,17 +29,17 @@ The data used in this script is not technically RAW, as we are using values afte
 
 ---
 
-###Tidy Data
+###Code Book
 In order to make the data tidy, I combined the Test and the Train data sets, which were randomly choosen by the data producers anyway. Then I extracted out just variables with mean() or std() in order to get just the variables that relate to mean or standard deviation. Next I adjusted the names to make more sense, and to correct some errors from their naming. Here is how variable names work.
 
 unitLocation(type?)Device(type?)-Math-Direction
 
-<b>unit</b>: this can be either t, for time, or f, for frequency
-<b>Location</b>: this can be either Body or Gravity
-<b>type</b>: This is an optional variable, specifying either a Jerk measurement or a Magnitude measurement.
-<b>Device</b>: This is either Accelerometer or Gyroscope, indicating the measuring device
-<b>Math</b>: is either mean or standard_deviation, meaning that its either a measurement of the mean or the standard_deviation.
-<b>Direction</b>: Is either x, y, or z, indication the movement direction
+<b>unit</b>: this can be either t, for time, or f, for frequency<br>
+<b>Location</b>: this can be either Body or Gravity<br>
+<b>type</b>: This is an optional variable, specifying either a Jerk measurement or a Magnitude measurement.<br>
+<b>Device</b>: This is either Accelerometer or Gyroscope, indicating the measuring device<br>
+<b>Math</b>: is either mean or standard_deviation, meaning that its either a measurement of the mean or the standard_deviation.<br>
+<b>Direction</b>: Is either x, y, or z, indication the movement direction<br>
 
 The following are column names ("/" mean one of each is present):
 
