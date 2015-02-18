@@ -39,29 +39,28 @@ It writes the output of this to a .txt file called by default "clean_tidy" name 
 ### Script Flow
  This script does the following things:
 
-1) Checks for existance of UCI HAR Dataset folder in the current WD. And prompts for final file name 
-2) Loads required packages. See Code Book and Read Me for more info.
-3) Reads in all the data containing files from the Dataset. See Code book for info.
-4) Binds together the test and train data:
-5) removes used files
-6) finds the features that contain mean() or std(), and makes a sorted list of the column numbers
-7) Uses that list to extract just those variables from the measurement data
-8) Makes a list of variable names by using the column numbers list again.
-9) Edits the names to be more readable, and remove R incompatible symbols
-9) Adds column names to the remaining four data/label files
-10) Binds the three data files together
-11) removes unnecessary files/values
-12) Merges the activity-labels file with the full-data file to give descriptive activity names
-13) Removes everything but the now Clean, Intermediate File.
-14) Converts Clean-Intermediate to a tbl_df file to enable DPLYR package functions
-15) removes old clean_intermediate DF
-16) Removes redundant Activity column using select(-Activity), which just contains numbers not names. 
-17) groups CI-tbl-df by Activity-Name and Subject_ID
-18) Removes the ungrouped CI-tbl-df
-19) Runs the mean function on each variable for each activity and each subject
-20) Removes the grouped_data
-21) writes out the new Tidy data set with either write.table(file = "x", row.names=FALSE)or
-	write.table(file = "clean_tidy.txt", row.names=FALSE)
+1) Checks for existance of UCI HAR Dataset folder in the current WD. And prompts for final file name <br>
+2) Loads required packages. See Code Book and Read Me for more info.<br>
+3) Reads in all the data containing files from the Dataset. See Code book for info.<br>
+4) Binds together the test and train data<br>
+5) removes used files<br>
+6) finds the features that contain mean() or std(), and makes a sorted list of the column numbers<br>
+7) Uses that list to extract just those variables from the measurement data<br>
+8) Makes a list of variable names by using the column numbers list again.<br>
+9) Edits the names to be more readable, and remove R incompatible symbols<br>
+9) Adds column names to the remaining four data/label files<br>
+10) Binds the three data files together<br>
+11) removes unnecessary files/values<br>
+12) Merges the activity-labels file with the full-data file to give descriptive activity names<br>
+13) Removes everything but the now Clean, Intermediate File.<br>
+14) Converts Clean-Intermediate to a tbl_df file to enable DPLYR package functions<br>
+15) removes old clean_intermediate DF<br>
+16) Removes redundant Activity column using select(-Activity), which just contains numbers not names. <br>
+17) groups CI-tbl-df by Activity-Name and Subject_ID<br>
+18) Removes the ungrouped CI-tbl-df<br>
+19) Runs the mean function on each variable for each activity and each subject<br>
+20) Removes the grouped_data<br>
+21) writes out the new Tidy data set with write.table(file= file_name, row.names=FALSE)<br>
 
 ---
 
