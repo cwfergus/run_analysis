@@ -43,25 +43,25 @@ unitLocation(type?)Device(type?)-Math-Direction
 
 The following are column names ("/" mean one of each is present):
 
-tBodyAccelerometer-Mean/Standard_Deviation-X/Y/Z
-tGravityAccelerometer-Mean/Standard_deviation-X/Y/Z
-tBodyJerkAccelerometer-Mean/Standard_Deviation-X/Y/Z
-tBodyGyroscope-Mean/Standard_deviation-X/Y/Z
-tBodyGyroscopeJerk-Mean/Standard_Deviation-X/Y/Z
-tBodyAccelerometerMagnitude-Mean/Standard_Deviation
-tGravityAccelerometerMagnitude-Mean/Standard_Deviation
-tBodyAccelerometerJerkMagnitude-Mean/Standard_Deviation
-tBodyGyroscopeMagnitude-Mean/Standard_Deviation
-tBodyGyroscopeJerkMagnitude-Mean/Standard_Deviation
-
-fBodyAccelerometer-Mean/Standard_Deviation-X/Y/Z
-fBodyAccelerometerJerk-Mean/Standard_Deviation-X/Y/Z
-fBodyGyroscope-Mean/Standard_Deviation-X/Y/Z
-fBodyAccelerometerMagnitude-Mean/Standard_Deviation
-fBodyAccelerometerJerkMagnitude-Mean/Standard_Deviation
-fBodyGyroscopeMagnitude-Mean/Standard_Deviation
-fBodyGyroscopeJerkMagnitude-Mean/Standard_Deviation
-
+tBodyAccelerometer-Mean/Standard_Deviation-X/Y/Z<br>
+tGravityAccelerometer-Mean/Standard_deviation-X/Y/Z<br>
+tBodyJerkAccelerometer-Mean/Standard_Deviation-X/Y/Z<br>
+tBodyGyroscope-Mean/Standard_deviation-X/Y/Z<br>
+tBodyGyroscopeJerk-Mean/Standard_Deviation-X/Y/Z<br>
+tBodyAccelerometerMagnitude-Mean/Standard_Deviation<br>
+tGravityAccelerometerMagnitude-Mean/Standard_Deviation<br>
+tBodyAccelerometerJerkMagnitude-Mean/Standard_Deviation<br>
+tBodyGyroscopeMagnitude-Mean/Standard_Deviation<br>
+tBodyGyroscopeJerkMagnitude-Mean/Standard_Deviation<br>
+<br>
+fBodyAccelerometer-Mean/Standard_Deviation-X/Y/Z<br>
+fBodyAccelerometerJerk-Mean/Standard_Deviation-X/Y/Z<br>
+fBodyGyroscope-Mean/Standard_Deviation-X/Y/Z<br>
+fBodyAccelerometerMagnitude-Mean/Standard_Deviation<br>
+fBodyAccelerometerJerkMagnitude-Mean/Standard_Deviation<br>
+fBodyGyroscopeMagnitude-Mean/Standard_Deviation<br>
+fBodyGyroscopeJerkMagnitude-Mean/Standard_Deviation<br>
+<br>
 Additional columns, ie the first two, refer to:
 The Subject_ID which is which of 30 people where performing the activity
 Activity_Name which is what activity people where doing (out of 6 possible choices)
